@@ -70,7 +70,7 @@ export class Store<S = any, A extends redux.Action = redux.AnyAction> {
    * wrap the result in a responsePromise that will resolve/reject based on the
    * action response from the background page
    */
-  dispatch<A>(data: A): A;
+ dispatch<A>(data: A): Promise<A>;
 
   /**
    * Interoperability point for observable/reactive libraries.
